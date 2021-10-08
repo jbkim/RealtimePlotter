@@ -7,7 +7,7 @@ import processing.serial.*;
 /* SETTINGS BEGIN */
 
 // Serial port to connect to
-String serialPortName = "/dev/tty.usbmodem1411";
+String serialPortName = "/dev/tty.usbmodem14643401";
 
 // If you want to debug the plotter without using a real serial port set this to true
 boolean mockupSerial = false;
@@ -26,8 +26,10 @@ JSONObject plotterConfigJSON;
 Graph BarChart = new Graph(225, 70, 600, 150, color(20, 20, 200));
 Graph LineGraph = new Graph(225, 350, 600, 200, color (20, 20, 200));
 float[] barChartValues = new float[6];
-float[][] lineGraphValues = new float[6][100];
-float[] lineGraphSampleNumbers = new float[100];
+
+float[][] lineGraphValues = new float[6][400];
+float[] lineGraphSampleNumbers = new float[400];
+
 color[] graphColors = new color[6];
 
 // helper for saving the executing path
